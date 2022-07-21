@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginApp.LoginUI"
+             BackgroundColor="#112847">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+
+            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pix_logo.svg/2483px-Pix_logo.svg.png" WidthRequest="180" HeightRequest="180"></Image>
+
+            <Entry x:Name="txtUsername" Placeholder="Username" TextColor="White" PlaceholderColor="Gray" />
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="White" PlaceholderColor="Gray" />
+            <Button 
+                VerticalOptions="Center" 
+                Text="Login" TextColor="White" 
+                BackgroundColor="Transparent"
+                BorderColor="ForestGreen"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Button_Clicked"
+            />
+
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Don't have an account? " TextColor="Gray" />
+                        <Span Text="Register" TextColor="Gray" FontAttributes="Bold" TextDecorations="Underline" />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
